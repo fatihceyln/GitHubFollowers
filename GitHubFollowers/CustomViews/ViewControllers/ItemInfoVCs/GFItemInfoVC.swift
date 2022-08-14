@@ -40,6 +40,8 @@ class GFItemInfoVC: UIViewController {
     }
     
     private func configureStackView() {
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
         stackView.axis = .horizontal
         stackView.distribution = .equalSpacing
         
@@ -55,8 +57,6 @@ class GFItemInfoVC: UIViewController {
     
     private func layoutUI() {
         view.addSubviews(stackView, actionButton)
-        
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         let padding: CGFloat = 20
         
         NSLayoutConstraint.activate([

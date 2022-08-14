@@ -143,14 +143,14 @@
 		3D1711B62896BB2E00D28683 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				3DEB990B289ADD93002A80F7 /* TabBarControllers */,
 				3DBA02822898513D0008A387 /* Labels */,
-				3DBA0281289851150008A387 /* ImageViews */,
-				3DBA0280289851100008A387 /* Views */,
 				3DBA027F289851090008A387 /* TextFields */,
 				3DBA027E289851040008A387 /* Buttons */,
+				3DBA0281289851150008A387 /* ImageViews */,
+				3DBA0280289851100008A387 /* Views */,
 				3DBA027D289850FD0008A387 /* ViewControllers */,
 				3DC5C6922897BD4B0057F47C /* Cells */,
+				3DEB990B289ADD93002A80F7 /* TabBarControllers */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -236,8 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				3D1711AD2896A91900D28683 /* GFTitleLabel.swift */,
-				3D1711AF2896AAAD00D28683 /* GFBodyLabel.swift */,
 				3DBA02892898F57E0008A387 /* GFSecondaryTitleLabel.swift */,
+				3D1711AF2896AAAD00D28683 /* GFBodyLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";

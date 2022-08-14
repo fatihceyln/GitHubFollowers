@@ -11,7 +11,7 @@ class SearchVC: UIViewController {
     
     let logoImageView: UIImageView = UIImageView()
     let usernameTextField: GFTextField = GFTextField()
-    let callToActionButton: GFButton = GFButton(title: "Get Followers", backgroundColor: .systemGreen)
+    let actionButton: GFButton = GFButton(title: "Get Followers", backgroundColor: .systemGreen)
     
     var isUsernameEntered: Bool {
         !usernameTextField.text!.isEmpty
@@ -22,10 +22,10 @@ class SearchVC: UIViewController {
         
         view.backgroundColor = .systemBackground
         
-        view.addSubviews(logoImageView, usernameTextField, callToActionButton)
+        view.addSubviews(logoImageView, usernameTextField, actionButton)
         configureLogoImageView()
         configureTextField()
-        configureCallToActionButton()
+        configureActionButton()
         createDismissKeyboardGesture()
     }
     
@@ -33,7 +33,6 @@ class SearchVC: UIViewController {
         super.viewWillAppear(animated)
         
         usernameTextField.text = ""
-        
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -80,14 +79,14 @@ class SearchVC: UIViewController {
         ])
     }
     
-    private func configureCallToActionButton() {
-        callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
+    private func configureActionButton() {
+        actionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
-            callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
-            callToActionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-            callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            callToActionButton.heightAnchor.constraint(equalToConstant: 50)
+            actionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
+            actionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            actionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+            actionButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 }
